@@ -53,22 +53,6 @@ Archivo principal:
 
 ---
 
-## 📂 Estructura del proyecto
-
-Data-engineering-portfolio/
-│
-├── src/
-│ └── main/
-│ └── scala/
-│ └── Semana1_Portfolio.scala
-│
-├── build.sbt
-├── .gitignore
-└── README.md
-
-
----
-
 ## 📖 Notebooks (Jupyter)
 
 Algunas semanas incluyen notebooks en **Jupyter (Scala – Almond)** utilizados para:
