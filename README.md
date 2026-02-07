@@ -40,8 +40,6 @@ Archivo principal:
 - `Semana1_Portfolio.scala`
 
 ---
-
----
 ## 📌 Tecnologías utilizadas
 
 - Scala
@@ -62,7 +60,6 @@ Algunas semanas incluyen notebooks en **Jupyter (Scala – Almond)** utilizados 
 
 Estos notebooks se añadirán progresivamente al repositorio.
 
----
 ---
 
 ## ✍️ Nota
