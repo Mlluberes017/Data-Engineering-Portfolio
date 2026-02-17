@@ -30,7 +30,6 @@ object ValidacionesCorreo extends App {
       terminaCom(email) &&
       !contieneEspacios(email)
   }
-
   // Probando ejemplos
   val email1 = "test@example.com"
   val email2 = "correo invalido.com"
