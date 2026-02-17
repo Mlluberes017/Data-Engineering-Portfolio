@@ -14,7 +14,7 @@ object TryBasico extends App {
   println("=== Ejemplo Try en Scala ===")
   println()
 
-  // Función que puede lanzar excepción (división)
+  // Funcion que puede lanzar excepción (división)
   def dividir(a: Int, b: Int): Try[Int] = Try(a / b)
 
   val resultado1 = dividir(10, 2)
