@@ -1,81 +1,150 @@
-# Data Engineering Portfolio – Scala & Spark (EOI)
+# Data Engineering Portfolio – Scala & PySpark (EOI)
 
-Este repositorio contiene mi portafolio de **Data Engineering**, desarrollado como parte del programa de la **EOI**, utilizando **Scala** y **Spark**.
+This repository contains my **Data Engineering Portfolio**, developed as part of the **Master’s Degree in Data Engineering at EOI**, using **Scala** and **PySpark**.
 
-El objetivo de este portafolio es documentar mi proceso de aprendizaje, desde los conceptos básicos hasta ejercicios prácticos y ejemplos desarrollados.
-
----
-## 📚 Contexto académico
-
-**Máster:** Ingeniería de Datos  
-**Módulo:** Programación Funcional y Scala  
-**Institución:** EOI – Escuela de Organización Industrial
-
-El contenido de este repositorio se apoya en los fundamentos teóricos de la programación funcional y el lenguaje Scala, trabajados durante el módulo, incluyendo conceptos como:
-
-- Programación funcional (FP)
-- Funciones puras e inmutabilidad
-- Uso de `val`, `var` y `def`
-- Funciones anónimas y de orden superior
-- Currying y funciones parcialmente aplicadas
-- Estructuras de datos como listas y tuplas
-- Introducción a Scala como lenguaje funcional y orientado a objetos
-
+The purpose of this portfolio is to document my progressive learning journey, from foundational concepts to practical exercises and more structured examples.
 
 ---
 
-## 🗂️ Contenido del repositorio
+## Academic Context
 
-### Semana 1 – Scala y Programación Funcional
+**Master’s Degree:** Data Engineering  
+**Module:** Functional Programming, Scala & PySpark  
+**Institution:** EOI – Escuela de Organización Industrial
 
-En esta primera parte se trabajan los conceptos básicos necesarios para comenzar a programar en Scala, preparando el terreno para su uso en entornos de Big Data y Spark.
+This repository is based on both theoretical and practical concepts covered during the module, including:
 
-Incluye:
-- Ejemplos prácticos en Scala
-- Uso de funciones y estructuras de datos
-- Primer contacto con el paradigma funcional
-- Ejecución de programas Scala mediante SBT
+- Functional Programming (FP)
+- Pure functions & immutability
+- Usage of `val`, `var`, and `def`
+- Anonymous functions (lambdas)
+- Higher-Order Functions (HOF)
+- Currying & partially applied functions
+- Collections (List, Seq, Tuple)
 
-Archivo principal:
-- `Semana1_Portfolio.scala`
+### Functional error handling:
+- `Option`
+- `Try`
+- `Either`
+
+Additional Scala concepts:
+- Traits & mixins
+- Generics
+- Functional validations
+- Scala as a hybrid language (FP + OOP)
+- Introduction to PySpark (in later weeks)
 
 ---
-## 📌 Tecnologías utilizadas
+
+## Repository Contents
+
+### **Week 1 – Scala Fundamentals & Functional Programming**
+
+This first stage focuses on the core Scala concepts, building the foundation for later Spark and PySpark work.
+
+### Topics Covered
+
+✔ Basic Scala syntax  
+✔ Functions (`def`)  
+✔ Anonymous functions (lambdas)  
+✔ Higher-Order Functions  
+✔ Collections (`List`, `map`, `filter`, `reduce`)  
+✔ Functional error handling  
+✔ Traits  
+✔ Generics  
+✔ Functional validations
+
+---
+
+### Exercises Implemented
+
+- **Semana1_Portfolio.scala** → Introductory Scala program
+- **FuncionesBasicas.scala** → Named functions & lambdas
+- **FuncionesOrdenSuperior.scala** → Higher-Order Functions
+- **OptionBasico.scala** → Safe value handling
+- **TryBasico.scala** → Exception handling
+- **EitherValidacion.scala** → Functional error modeling
+- **ColeccionesBasicas.scala** → `map` / `filter` / `reduce`
+- **ValidacionesCorreo.scala** → Functional validations
+- **GenericsBasico.scala** → Type parameters
+- **NotasConTraitsApp.scala** → Traits + Collections + FP
+
+---
+
+## Mini Project – IoT Data Validator
+
+A structured example simulating:
+
+✔ Sensor data generation  
+✔ Domain modeling  
+✔ Functional validations  
+✔ Valid vs invalid data partitioning  
+✔ Error reporting  
+✔ Basic execution time measurement
+
+### Files:
+- `IotDomain.scala`
+- `IotDataValidations.scala`
+- `IotDataValidatorApp.scala`
+
+---
+
+### **Week 2 – Scala & PySpark (In Progress)**
+
+This stage begins to deepen into:
+
+✔ Intermediate Scala  
+✔ Conceptual integration with Spark  
+✔ Introduction to PySpark  
+✔ Transformations & actions  
+✔ Functional modeling applied to data
+
+*(Content under continuous development)*
+
+---
+
+## Technologies Used
 
 - Scala
+- PySpark *(later weeks)*
 - sbt
 - Java JDK 17 (Eclipse Temurin)
 - IntelliJ IDEA
 - Git & GitHub
-- Spark (en semanas posteriores)
+- Apache Spark
 
 ---
 
-## 📖 Notebooks (Jupyter)
+## Notebooks (Jupyter / Almond)
 
-Algunas semanas incluyen notebooks en **Jupyter (Scala – Almond)** utilizados para:
-- Explicaciones teóricas
-- Ejercicios prácticos
-- Documentación del aprendizaje
+Some weeks may include notebooks using:
 
-Estos notebooks se añadirán progresivamente al repositorio.
+**Jupyter + Scala (Almond)**
+
+Used for:
+
+✔ Theoretical explanations  
+✔ Interactive exercises  
+✔ Learning documentation
+
+They will be added progressively.
 
 ---
 
-## ✍️ Nota
+##  Note
 
-Este repositorio tiene un propósito **formativo y académico**, y forma parte de un proceso de aprendizaje progresivo dentro del máster.
+This repository has an **educational and academic purpose**, representing a progressive learning process within the **Master’s Degree in Data Engineering**.
 
 ---
 
-## ✍️ Autora
+##  Author
 
 **Marla Marie Lluberes Santana**  
-Ingeniera Industrial  
-Programa EOI – Data Engineering
+Industrial Engineer  
+EOI – Master’s Degree in Data Engineering
 
 ---
 
-## Estado del proyecto
+## Project Status
 
-🟢 En desarrollo – se irá actualizando semanalmente.
+**In Development – Updated weekly.**
