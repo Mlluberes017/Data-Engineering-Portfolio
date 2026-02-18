@@ -32,7 +32,13 @@ Additional Scala concepts:
 - Generics
 - Functional validations
 - Scala as a hybrid language (FP + OOP)
-- Introduction to PySpark (in later weeks)
+
+
+### Spark & PySpark (later weeks)
+- Spark basics & execution model
+- Transformations & actions
+- Spark SQL fundamentals
+- Introduction to PySpark
 
 ---
 
@@ -89,40 +95,73 @@ A structured example simulating:
 
 ---
 
-### **Week 2 – Scala & PySpark (In Progress)**
+## Week 2 – Spark (Local) + Spark SQL Intro
+This stage focuses on running **Apache Spark locally** using **Scala + IntelliJ**, and practicing **Spark Core** and **Spark SQL**.
 
-This stage begins to deepen into:
+### What I worked on
+✔ Spark setup and execution in **IntelliJ** (local mode)  
+✔ Creating a `SparkSession` and running jobs with `local[*]`  
+✔ Understanding basic Spark app lifecycle (driver/executor locally)  
+✔ Spark UI access in local mode (port 4040)  
+✔ Spark SQL + DataFrame operations  
+✔ Reading JSON files from `src/main/resources`  
+✔ Building a helper (`SqlRunner`) to label SQL jobs in Spark UI/logs
 
-✔ Intermediate Scala  
-✔ Conceptual integration with Spark  
-✔ Introduction to PySpark  
-✔ Transformations & actions  
-✔ Functional modeling applied to data
+### Exercises Implemented
 
-*(Content under continuous development)*
+#### 1) SparkPi (Spark Core)
+Classic Spark example to compute an approximation of π, reinforcing:
+- Parallelization
+- Transformations vs actions
+- Local execution with Spark
+
+ `src/main/scala/portfolio/week2/SparkPi.scala`
+
+#### 2) Spark SQL Intro 01 – JSON Input from resources
+Spark SQL basics using a sample JSON file stored in resources:
+- Load JSON into a DataFrame
+- Print schema & show data
+- Create temp view and query with SQL
+
+`src/main/scala/portfolio/week2/sqlintro/SparkSQLIntro01.scala`  
+`src/main/resources/sample_data/employees.json`
+
+> Note: I created the resources folder and stored the JSON under:
+> `src/main/resources/sample_data/`
+
+#### 3) SqlRunner Example – “SQL job labeling” + queries
+A small helper that executes SQL strings and sets metadata:
+- `callSite.short`
+- `callSite.long`
+- Job description (visible in Spark UI)
+
+It runs multiple SQL queries over a registered temp view and compares with the DataFrame API.
+
+`src/main/scala/portfolio/week2/sqlintro/SqlRunnerExample.scala`
+
+Key learning:
+- Avoiding encoder errors by modeling optional values with `Option`
+- Practical use of temp views + SQL strings
+- Improving traceability of jobs inside Spark UI
 
 ---
 
 ## Technologies Used
-
 - Scala
-- PySpark *(later weeks)*
+- Apache Spark
+- PySpark (later weeks)
 - sbt
-- Java JDK 17 (Eclipse Temurin)
+- Java (Eclipse Temurin)
 - IntelliJ IDEA
 - Git & GitHub
-- Apache Spark
 
 ---
 
 ## Notebooks (Jupyter / Almond)
-
 Some weeks may include notebooks using:
-
-**Jupyter + Scala (Almond)**
+- Jupyter + Scala (Almond)
 
 Used for:
-
 ✔ Theoretical explanations  
 ✔ Interactive exercises  
 ✔ Learning documentation
@@ -131,14 +170,12 @@ They will be added progressively.
 
 ---
 
-##  Note
-
-This repository has an **educational and academic purpose**, representing a progressive learning process within the **Master’s Degree in Data Engineering**.
+## Note
+This repository has an educational and academic purpose, representing a progressive learning process within the Master’s Degree in Data Engineering.
 
 ---
 
-##  Author
-
+## Author
 **Marla Marie Lluberes Santana**  
 Industrial Engineer  
 EOI – Master’s Degree in Data Engineering
@@ -146,5 +183,4 @@ EOI – Master’s Degree in Data Engineering
 ---
 
 ## Project Status
-
 **In Development – Updated weekly.**
