@@ -103,7 +103,7 @@ object Week2_PrimeraAppSpark {
     println("=== Process Completed Successfully ===")
 
     // =========================================================
-    // 7️⃣ Cierre de Spark
+    // Cierre de Spark
     // =========================================================
     spark.stop()
   }
