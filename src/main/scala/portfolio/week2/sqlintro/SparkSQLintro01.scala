@@ -7,6 +7,7 @@ package portfolio.week2.sqlintro
 
 import org.apache.spark.sql.catalog.Catalog
 import org.apache.spark.sql.{DataFrame, SparkSession}
+import portfolio.utils.ConfigLoader
 
 import scala.Console.{BOLD, RESET}
 
@@ -17,8 +18,9 @@ object SparkSQLintro01 extends App {
   // SparkSession = punto de entrada para Spark SQL / DataFrames
   // ============================================================
   implicit val spark: SparkSession = SparkSession.builder()
-    .appName("SparkSQLIntro01")   // Nombre visible en Spark UI
-    .master("local[*]")           // Ejecutar en local usando todos los cores
+    .appName(ConfigLoader.sparkAppName)   // Nombre visible en Spark UI
+    .master(ConfigLoader.sparkMaster)     // Ejecutar en local usando todos los cores
+    .config("spark.sql.shuffle.partitions", ConfigLoader.sparkShufflePartitions) // Configuración de particiones
     .getOrCreate()
 
   // Reducir ruido en consola (logs)
@@ -64,7 +66,7 @@ object SparkSQLintro01 extends App {
   // ============================================================
   val df: DataFrame = spark.read
     .option("inferSchema", "true")
-    .json("src/main/resources/sample_data/employees.json")
+    .json(ConfigLoader.employeesPath)
 
   println("=== Schema ===")
   df.printSchema()
