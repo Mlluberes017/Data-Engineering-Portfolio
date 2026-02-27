@@ -7,23 +7,18 @@ package portfolio.week2.sqlintro
 
 import org.apache.spark.SparkConf
 import org.apache.spark.sql.{DataFrame, SaveMode, SparkSession}
+import portfolio.utils.ConfigLoader
 
 object Week2_PrimeraAppSpark {
 
   // =========================================================
-  // 1️SparkConf → Configuración básica de Spark
-  // =========================================================
-  // Se define cómo se ejecutará Spark.
-  //
-  // setAppName → nombre visible en Spark UI
-  // setMaster("local[*]") → ejecución local usando todos los cores
-  // shuffle partitions → reducimos particiones para ejemplos pequeños
+  // 1️SparkConf → Configuración básica de Spark (vía ConfigLoader)
   // =========================================================
   private val conf: SparkConf = new SparkConf()
-    .setAppName("Week2_PrimeraAppSpark")
-    .setMaster("local[*]")
-    .set("spark.sql.shuffle.partitions", "4")
-    .set("spark.shuffle.partitions", "4")
+    .setAppName(ConfigLoader.sparkAppName)
+    .setMaster(ConfigLoader.sparkMaster)
+    .set("spark.sql.shuffle.partitions", ConfigLoader.sparkShufflePartitions)
+    .set("spark.shuffle.partitions", ConfigLoader.sparkShufflePartitions)
 
   // =========================================================
   // Generación de datos simulados

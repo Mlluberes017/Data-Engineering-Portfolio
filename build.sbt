@@ -1,7 +1,9 @@
+import Versiones._
+
 ThisBuild / version := "0.1.0-SNAPSHOT"
 ThisBuild / scalaVersion := "2.13.18"
 
-val SparkVersion = "4.1.1"
+
 
 lazy val root = (project in file("."))
   .settings(
@@ -9,6 +11,7 @@ lazy val root = (project in file("."))
 
     libraryDependencies ++= Seq(
       "org.apache.spark" %% "spark-core" % SparkVersion,
-      "org.apache.spark" %% "spark-sql"  % SparkVersion
+      "org.apache.spark" %% "spark-sql"  % SparkVersion,
+      "com.typesafe"      % "config"     % TypesafeConfigConfig,
     )
   )
